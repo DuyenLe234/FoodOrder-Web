@@ -1,0 +1,158 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #faf2f9;
+    margin: 0;
+    padding: 0;
+}
+
+.logo-section {
+    background-color: pink;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    height: 150px;
+}
+
+.logo-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    height: 70px;
+}
+
+.social-icons img {
+    height: 20px;
+    margin-right: 10px;
+    
+}
+
+.brand-logo img {
+    height: 65px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+   
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+.login-button {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.search-icon {
+    cursor: pointer;
+}
+
+.search-box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.search-icon img {
+    width: 30px; /* Set your desired width */
+    height: 30px; /* Set your desired height */
+    margin-right: 10px;
+}
+
+
+.search-box input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.search-box.active {
+    display: block;
+    z-index: 1000;
+}
+.menu-section {
+    background-color: white; /* Light green color */
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.menu-item {
+    margin: 0 40px;
+}
+
+.menu-toggle-text {
+    display: none; /* Ẩn ban đầu */
+}
+
+
+
+@media (max-width: 768px) {
+    .menu-toggle-text {
+        display: block; /* Hiển thị khi kích thước màn hình nhỏ hơn hoặc bằng 768px */
+        text-align: center; /* Căn giữa dòng chữ */
+        font-weight: bold; /* In đậm chữ */
+        
+        margin: auto;
+        font-size: 40px;
+   
+
+    }
+}
+
+
+
+.banner-section {
+    position: relative;
+    text-align: center;
+
+}
+
+.banner-image {
+    max-width: 100%;
+    height: 800px;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #fff; /* Text color */
+}
+
+
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.footer-section {
+    background-color: #696969; /* Dim Gray */
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+

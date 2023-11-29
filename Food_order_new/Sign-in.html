@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bone.css">
+    <style>
+       
+
+        .flex-container {
+
+            margin: auto;
+        }
+        
+
+
+            .flex-container  {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1400px;
+        }
+
+    .ad-section {
+        background-color: #ffcccb;
+    }
+
+    .signin-section {
+        background-color: #add8e6; 
+    }
+
+
+ 
+
+
+
+        .footer-section {
+            background-color: #696969;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+    </style>
+    <title>sign-up</title>
+</head>
+
+<body>
+    <!-- Logo Section -->
+    <div class="logo-section">
+        <div class="logo-container">
+            <div class="social-icons">
+                <img src="facebook-logo.png" alt="Facebook">
+                <img src="instagram-logo.png" alt="Instagram">
+                <img src="twitter-logo.png" alt="Twitter">
+            </div>
+            <div class="brand-logo">
+                <img src="brand-logo.png" alt="Brand Logo">
+            </div>
+            <div class="search-login">
+                <div class="search-icon" onclick="toggleSearchBox()">
+                    <img src="search-logo.png" alt="Search">
+                </div>
+                <button class="login-button">Login</button>
+                <div class="search-box" id="searchBox">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Section -->
+    <div class="menu-section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="menu-toggle-text">ĂN ÍT THÔI</div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link menu-item" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-item" href="#">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-item" href="#">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-item" href="#">Dịch vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-item" href="#">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-item" href="#">Khuyến mãi</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+<div class="row">
+    <div class="col-6 ad-section">
+        <h2>Ad Section</h2>
+        <!-- Add your ad content here -->
+    </div>
+
+    <div class="col-6 signin-section">
+        <h2>Sign-in Section</h2>
+        <!-- Add your sign-in content here -->
+    </div>
+</div>
+
+
+    
+
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+    <div class="footer-section">
+        <div class="container">
+            <h2>Footer</h2>
+            <!-- Add your footer content here -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleSearchBox() {
+            var searchBox = document.getElementById('searchBox');
+            searchBox.classList.toggle('active');
+
+            var searchInput = document.getElementById('searchInput');
+            if (searchBox.classList.contains('active')) {
+                searchInput.focus();
+                document.body.addEventListener('click', closeSearchBox);
+            } else {
+                document.body.removeEventListener('click', closeSearchBox);
+            }
+        }
+
+        function closeSearchBox(event) {
+            var searchBox = document.getElementById('searchBox');
+            var searchIcon = document.querySelector('.search-icon');
+            if (!searchBox.contains(event.target) && !searchIcon.contains(event.target)) {
+                searchBox.classList.remove('active');
+                document.body.removeEventListener('click', closeSearchBox);
+            }
+        }
+    </script>
+</body>
+
+</html>
